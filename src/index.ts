@@ -31,6 +31,7 @@ async function setupViewer(){
     // Initialize the viewer
     const viewer = new ViewerApp({
         canvas: document.getElementById('webgi-canvas') as HTMLCanvasElement,
+        useRgbm: false,
     })
 
     // Add plugins individually.
@@ -62,7 +63,7 @@ async function setupViewer(){
     await viewer.addPlugin(CanvasSnipperPlugin)
 
     // Import and add a GLB file.
-    await viewer.load("./assets/classic-watch.glb")
+    await viewer.load("./assets/mixue-mascot3.glb")
 
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap("./assets/environment.hdr");
